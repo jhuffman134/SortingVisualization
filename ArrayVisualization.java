@@ -19,16 +19,6 @@ public class ArrayVisualization {
 
         new InsertionSort().runSort(sortArray);
         new ShuffleArray().runShuffle(sortArray);
-
-
-
-        // window.setVisible(true);
-
-
-
-
-
-
     }
 
     public static void main(String[] args) {
