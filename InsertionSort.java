@@ -1,5 +1,3 @@
-
-
 public class InsertionSort {
 
     public void runSort(SortArray arr) {
