@@ -20,8 +20,6 @@ public class SortArray extends JPanel {
         setBackground(Color.darkGray);
 
         shuffleArray();
-
-        // new InsertionSort().runSort(array);
     }
 
     public int getNumBars() {
