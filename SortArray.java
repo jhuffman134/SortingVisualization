@@ -11,6 +11,8 @@ public class SortArray extends JPanel {
     private static final int BAR_WIDTH = 5;
     private static final int NUM_BARS = WINDOW_WIDTH / BAR_WIDTH;
     private final int[] array;
+    private static int changedIndex1;
+    private static int changedIndex2;
 
     public SortArray() {
         array = new int[NUM_BARS];
@@ -39,6 +41,9 @@ public class SortArray extends JPanel {
         array[index1] = array[index2];
         array[index2] = temp;
 
+        changedIndex1 = index1;
+        changedIndex2 = index2;
+
         repaint();
         sleepFor(nanoSecondDelay);
     }
@@ -65,13 +70,19 @@ public class SortArray extends JPanel {
     public void paintComponent(Graphics g) {
         Graphics2D graphics = (Graphics2D) g;
         super.paintComponent(graphics);
-        graphics.setColor(Color.white);
+        //graphics.setColor(Color.white);
         for (int i = 0; i < NUM_BARS; i++) {
+            graphics.setColor(Color.white);
             int height = getValue(i) * 2;
             int xStart = i + (BAR_WIDTH - 1) * i;
             int yStart = WINDOW_HEIGHT - height;
 
-            graphics.fillRect(xStart, yStart, BAR_WIDTH, height);
+            if (i == changedIndex2 || i == changedIndex1) {
+                graphics.setColor(Color.blue);
+                graphics.fillRect(xStart, yStart, BAR_WIDTH, height);
+            } else {
+                graphics.fillRect(xStart, yStart, BAR_WIDTH, height);
+            }
         }
     }
 

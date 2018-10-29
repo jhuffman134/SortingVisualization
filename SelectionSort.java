@@ -10,9 +10,10 @@ public class SelectionSort {
                 }
             }
             if (smallest != i) {
-                long delay = 5000000;
+                long delay = 30000000;
                 arr.swap(i, smallest, delay);
             }
         }
+        arr.sleepFor(855500000);
     }
 }
