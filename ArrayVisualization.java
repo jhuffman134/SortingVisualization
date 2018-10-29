@@ -21,6 +21,7 @@ public class ArrayVisualization {
         new ShuffleArray().runShuffle(array);
         new BubbleSort().runSort(array);
         new ShuffleArray().runShuffle(array);
+        new SelectionSort().runSort(array);
     }
 
     public static void main(String[] args) {
