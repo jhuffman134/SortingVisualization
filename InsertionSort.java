@@ -5,7 +5,7 @@ public class InsertionSort {
         for (int i = 1; i < len; i++) {
             int j = i;
             while ((j > 0) && (arr.getValue(j - 1)) > arr.getValue(j)) {
-                long delay = 500000;
+                long delay = 100000;
                 arr.swap(j, j-1, delay);
                 j--;
             }

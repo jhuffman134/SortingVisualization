@@ -8,7 +8,7 @@ import java.awt.Color;
 public class SortArray extends JPanel {
     public static final int WINDOW_WIDTH = 1280;
     public static final int WINDOW_HEIGHT = 720;
-    private static final int BAR_WIDTH = 5;
+    private static final int BAR_WIDTH = 2;
     private static final int NUM_BARS = WINDOW_WIDTH / BAR_WIDTH;
     private final int[] array;
     private static int changedIndex1;
@@ -16,7 +16,7 @@ public class SortArray extends JPanel {
 
     public SortArray() {
         array = new int[NUM_BARS];
-        for (int i = 0; i < NUM_BARS; i++) {
+        for (int i = 0; i < array.length; i++) {
             array[i] = i + 1;
         }
         setBackground(Color.darkGray);
@@ -73,7 +73,7 @@ public class SortArray extends JPanel {
         //graphics.setColor(Color.white);
         for (int i = 0; i < NUM_BARS; i++) {
             graphics.setColor(Color.white);
-            int height = getValue(i) * 2;
+            int height = getValue(i);
             int xStart = i + (BAR_WIDTH - 1) * i;
             int yStart = WINDOW_HEIGHT - height;
 
