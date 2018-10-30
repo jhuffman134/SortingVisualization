@@ -10,7 +10,7 @@ public class SelectionSort {
                 }
             }
             if (smallest != i) {
-                long delay = 13000000;
+                long delay = 8000000;
                 arr.swap(i, smallest, delay);
             }
         }

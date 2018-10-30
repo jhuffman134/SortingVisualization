@@ -7,7 +7,7 @@ public class BubbleSort {
             swapped = false;
             for (int j = 1; j < len - i; j++) {
                 if (arr.getValue(j-1) > arr.getValue(j)) {
-                    long delay = 70000;
+                    long delay = 50000;
                     arr.swap(j-1, j, delay);
                     swapped = true;
                 }

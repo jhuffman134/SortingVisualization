@@ -4,16 +4,18 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.JPanel;
 import java.awt.BorderLayout;
+import javax.swing.JLabel;
 
 public class ArrayVisualization {
     public static final int WIN_WIDTH = 1280;
     public static final int WIN_HEIGHT = 740;
 
     private JFrame window;
-    private JPanel buttons;
+    private JPanel texts;
     private SortArray array;
     private JButton shuffleButton;
     private JButton bubbleSortButton;
+    private JLabel text;
 
     public ArrayVisualization() {
         window = new JFrame("Sorting algorithm visualization");
@@ -43,13 +45,24 @@ public class ArrayVisualization {
         array = new SortArray();
         window.add(array);
 
+        // text = new JLabel();
+        // text.setText("InsertionSort");
+
+        // texts = new JPanel();
+        // texts.add(text);
+        // window.add(texts);
+
         window.setVisible(true);
 
-        new InsertionSort().runSort(array);
-        new ShuffleArray().runShuffle(array);
-        new BubbleSort().runSort(array);
-        new ShuffleArray().runShuffle(array);
+        //new InsertionSort().runSort(array);
+        //new ShuffleArray().runShuffle(array);
+        // text.setText("BubbleSort");
+        //new BubbleSort().runSort(array);
+        //new ShuffleArray().runShuffle(array);
+        // text.setText("SelectionSort");
         new SelectionSort().runSort(array);
+        new ShuffleArray().runShuffle(array);
+        new CocktailSort().runSort(array);
         new ShuffleArray().runShuffle(array);
     }
 

@@ -6,7 +6,7 @@ public class ShuffleArray {
         Random random = new Random();
         for (int i = 0; i < arr.getNumBars(); i++) {
             int swap = random.nextInt(arr.getNumBars() - 1);
-            long delay = 3000000;
+            long delay = 5000000;
             arr.swap(i, swap, delay);
         }
     }
